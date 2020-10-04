@@ -3,6 +3,7 @@ package com.example.androidbasic
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -26,6 +27,12 @@ class MainActivity : AppCompatActivity() {
 
         buttonRecycler.setOnClickListener {
             startActivity(Intent(this, RecyclerActivity::class.java))
+        }
+    }
+
+    fun onClick (view: View) {
+        view.setOnClickListener {
+            startActivity(Intent(this, FragmentActivity::class.java))
         }
     }
 }
