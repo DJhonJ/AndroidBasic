@@ -3,6 +3,7 @@ package com.example.androidbasic
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.androidbasic.fragments.GreenFragment
@@ -18,6 +19,12 @@ class FragmentActivity : AppCompatActivity() {
         val oneFragment = OneFragment()
         // asi llamamos a un fragment static
         supportFragmentManager.beginTransaction().add(R.id.contenedorFragments, oneFragment).commit()
+
+        val toolbar = findViewById<Toolbar>(R.id.app_bar)
+        setSupportActionBar(toolbar)
+
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     fun onClick (view: View) {

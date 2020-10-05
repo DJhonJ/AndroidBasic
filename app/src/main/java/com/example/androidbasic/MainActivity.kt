@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +29,9 @@ class MainActivity : AppCompatActivity() {
         buttonRecycler.setOnClickListener {
             startActivity(Intent(this, RecyclerActivity::class.java))
         }
+
+        val toolbar = findViewById<Toolbar>(R.id.app_bar)
+        setSupportActionBar(toolbar)
     }
 
     fun onClick (view: View) {
