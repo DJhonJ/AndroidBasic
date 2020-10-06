@@ -9,49 +9,64 @@
         android:id="@+id/app_bar"
         layout="@layout/app_bar" />
 
-    <Button
-        android:id="@+id/buttonToast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Click Me !!"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar" />
-
-    <EditText
-        android:id="@+id/etMensaje"
+    <LinearLayout
+        android:id="@+id/linearLayoutPather"
+        android:padding="16dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:hint="Ecribe algo"
-        android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@id/buttonToast" />
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/buttonIr"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ir"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etMensaje" />
+        <Button
+            android:id="@+id/buttonToast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:text="Message Toast" />
 
-    <Button
-        android:id="@+id/buttonRecycler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Recycler View"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonIr" />
+        <EditText
+            android:id="@+id/etMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:hint="Ecribe algo"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/buttonToast" />
 
-    <Button
-        android:id="@+id/buttonFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="Fragments"
-        app:layout_constraintTop_toBottomOf="@id/buttonRecycler" />
+        <Button
+            android:id="@+id/buttonIr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ir"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etMensaje" />
+
+        <Button
+            android:id="@+id/buttonRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Recycler View"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonIr" />
+
+        <Button
+            android:id="@+id/buttonFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Fragments"
+            app:layout_constraintTop_toBottomOf="@id/buttonRecycler" />
+
+        <Button
+            android:id="@+id/Sumar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sumar números" />
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
