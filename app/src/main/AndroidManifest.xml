@@ -10,20 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".SecondActivity" />
-        <activity android:name=".RecyclerActivity" />
-        <activity android:name=".FragmentActivity"
-            android:parentActivityName=".FragmentActivity">
+        <activity android:name=".activities.SecondActivity" />
+        <activity android:name=".activities.RecyclerActivity" />
+        <activity android:name=".activities.FragmentActivity"
+            android:parentActivityName=".activities.FragmentActivity">
 
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                       android:value=".MainActivity"/>
+                       android:value=".activities.MainActivity"/>
         </activity>
     </application>
 

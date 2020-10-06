@@ -1,14 +1,14 @@
-package com.example.androidbasic
+package com.example.androidbasic.activities
 
 import android.content.Context
 import android.content.Intent
-import android.os.Parcel
-import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.androidbasic.model.Hobby
+import com.example.androidbasic.R
 import kotlinx.android.synthetic.main.list_item.view.*
 
 //Adaptador para el recycler view
@@ -24,14 +24,14 @@ class HobbiesAdapter(val context: Context, val hobbies: List<Hobby>) : RecyclerV
                 Toast.makeText(context, "${currentHobby?.title} has Clicked !", Toast.LENGTH_SHORT).show()
             }
 
-            itemView.imgShare.setOnClickListener {
+            /*itemView.imgShare.setOnClickListener {
                 var text : String = "Hello, i am ${currentHobby?.title}"
                 val intent = Intent()
                 intent.action = Intent.ACTION_SEND
                 intent.putExtra(Intent.EXTRA_TEXT, text)
                 intent.type = "text/plain"
                 context.startActivity(Intent.createChooser(intent, "Please select App: "))
-            }
+            }*/
         }
 
         // funcion para binder los datos del modelo con la vista

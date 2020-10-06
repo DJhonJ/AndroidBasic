@@ -1,8 +1,10 @@
-package com.example.androidbasic
+package com.example.androidbasic.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.androidbasic.R
+import com.example.androidbasic.model.Supplier
 import kotlinx.android.synthetic.main.activity_recycler.*
 
 class RecyclerActivity: AppCompatActivity() {
@@ -14,7 +16,10 @@ class RecyclerActivity: AppCompatActivity() {
         layoutManager.orientation = LinearLayoutManager.VERTICAL
         recyclerView.layoutManager = layoutManager
 
-        val adapter = HobbiesAdapter(this, Supplier.hobbies)
+        val adapter = HobbiesAdapter(
+            this,
+            Supplier.hobbies
+        )
         recyclerView.adapter = adapter
     }
 }

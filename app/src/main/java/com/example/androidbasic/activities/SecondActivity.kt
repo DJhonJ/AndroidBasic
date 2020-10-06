@@ -1,8 +1,9 @@
-package com.example.androidbasic
+package com.example.androidbasic.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.androidbasic.R
 import kotlinx.android.synthetic.main.activity_second.*
 
 class SecondActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.example.androidbasic
+package com.example.androidbasic.model
 
 // data class, clase para tratar datos (ej: deserializar objetos, etc...)
 data class Hobby (var title: String)
