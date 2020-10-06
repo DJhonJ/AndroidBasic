@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/constraintParent"
     android:layout_height="match_parent">
 
     <include
@@ -10,7 +11,7 @@
         layout="@layout/app_bar" />
 
     <LinearLayout
-        android:id="@+id/linearLayoutPather"
+        android:id="@+id/linearLayoutMainActivity"
         android:padding="16dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/app_bar"
@@ -61,7 +62,7 @@
             app:layout_constraintTop_toBottomOf="@id/buttonRecycler" />
 
         <Button
-            android:id="@+id/Sumar"
+            android:id="@+id/buttonSumar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sumar números" />

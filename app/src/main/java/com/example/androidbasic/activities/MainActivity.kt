@@ -7,12 +7,16 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.example.androidbasic.R
+import com.example.androidbasic.fragments.SumarFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val toolbar = findViewById<Toolbar>(R.id.app_bar)
+        setSupportActionBar(toolbar)
 
         buttonToast.setOnClickListener {
             Toast.makeText(this, "Buttonm was clicked !!", Toast.LENGTH_SHORT).show()
@@ -31,8 +35,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, RecyclerActivity::class.java))
         }
 
-        val toolbar = findViewById<Toolbar>(R.id.app_bar)
-        setSupportActionBar(toolbar)
+        buttonSumar.setOnClickListener {
+            supportFragmentManager.beginTransaction().add(R.id.constraintParent, SumarFragment()).commit()
+            linearLayoutMainActivity.visibility = View.INVISIBLE
+        }
     }
 
     fun onClick (view: View) {
