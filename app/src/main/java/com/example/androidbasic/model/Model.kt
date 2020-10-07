@@ -1,7 +1,9 @@
 package com.example.androidbasic.model
 
+import java.io.Serializable
+
 // data class, clase para tratar datos (ej: deserializar objetos, etc...)
-data class Hobby (var title: String)
+data class Hobby (var title: String) : Serializable
 
 //expresion de objeto (expression object)
 // funciona como un objeto de una clase

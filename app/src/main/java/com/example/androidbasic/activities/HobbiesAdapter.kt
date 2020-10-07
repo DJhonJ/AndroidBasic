@@ -2,6 +2,7 @@ package com.example.androidbasic.activities
 
 import android.content.Context
 import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,9 +22,16 @@ class HobbiesAdapter(val context: Context, val hobbies: List<Hobby>) : RecyclerV
 
         init {
             itemView.setOnClickListener {
-                Toast.makeText(context, "${currentHobby?.title} has Clicked !", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(context, "${currentHobby?.title} has Clicked !", Toast.LENGTH_SHORT).show()
+
+                val intentDetalle : Intent = Intent(context, DetalleActivity::class.java)
+                val bundle : Bundle = Bundle()
+                bundle.putSerializable("hobby", currentHobby)
+                intentDetalle.putExtras(bundle)
+                context.startActivity(intentDetalle)
             }
 
+            //INTENT IMPLICITO
             /*itemView.imgShare.setOnClickListener {
                 var text : String = "Hello, i am ${currentHobby?.title}"
                 val intent = Intent()

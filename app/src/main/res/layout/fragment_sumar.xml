@@ -8,9 +8,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
-        android:layout_height="wrap_content">
+        android:padding="16dp">
 
         <EditText
             android:id="@+id/editTextNumberOne"
@@ -34,12 +34,12 @@
             android:layout_marginTop="10dp"
             android:text="Sumar" />
 
-        <TextView android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textViewResultado"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Resultado"
-            android:textSize="16sp"
-            android:id="@+id/textViewResultado"
-            />
+            android:textSize="16sp" />
 
     </LinearLayout>
 

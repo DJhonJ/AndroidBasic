@@ -7,10 +7,13 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.example.androidbasic.R
+import com.example.androidbasic.`interface`.IClicked
 import com.example.androidbasic.fragments.SumarFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), IClicked {
+    //private var isActiveFragment: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -38,6 +41,28 @@ class MainActivity : AppCompatActivity() {
         buttonSumar.setOnClickListener {
             supportFragmentManager.beginTransaction().add(R.id.constraintParent, SumarFragment()).commit()
             linearLayoutMainActivity.visibility = View.INVISIBLE
+
+            //isActiveFragment = true
+        }
+    }
+
+    /*override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putBoolean("isActiveFragment", isActiveFragment)
+    }*/
+
+    /*override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        val active : Boolean = savedInstanceState.getBoolean("isActiveFragment")
+        if (active) {
+            linearLayoutMainActivity.visibility = View.INVISIBLE
+        }
+    }*/
+
+    override fun click (isClicked: Boolean) {
+        if (isClicked) {
+            linearLayoutMainActivity.visibility = View.INVISIBLE
+            Toast.makeText(this, "Llamada desde el fragment", Toast.LENGTH_SHORT).show()
         }
     }
 
