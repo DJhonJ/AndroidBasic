@@ -12,9 +12,10 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second)
 
         val bundle: Bundle? = intent.extras
-        val message = bundle?.getString("user_message")
-        tvMessage.text = message
+        var message = bundle?.getString("user_message")
 
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        if (message.isNullOrEmpty()) message = "Soy un mensaje de entrada."
+        
+        tvMessage.text = message
     }
 }
